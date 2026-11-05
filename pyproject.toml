@@ -1,0 +1,15 @@
+[tool.pytest.ini_options]
+bdd_features_base_dir = "features/"
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --browser chromium"
+markers = [
+    "smoke: the pre-merge gate",
+    "regression: the full nightly suite",
+    "catalogue: catalogue and search",
+    "auth: authentication",
+    "checkout: cart and checkout",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
